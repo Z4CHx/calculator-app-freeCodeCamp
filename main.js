@@ -7,7 +7,7 @@ $(document).ready(function(){
     var operator = "";
     var displayArea = $("#display");
     var display = function(output){
-        $("#display").append(output);
+        $("#display").html(output);
     }
     
     var calc = function(a,b,operator){
@@ -30,6 +30,8 @@ $(document).ready(function(){
            console.log("result: a / b was " + ( a / b ) );
            result = a / b;
            return result;
+       } else {
+           return 0;
        }
        
    };
@@ -48,7 +50,7 @@ $(document).ready(function(){
             b = 0;
             result = 0;
             pressed = "";
-            display(pressed);
+            display(calc);
             console.log("all was cleared");
         } else if (buttonValue === "="){
             
@@ -62,7 +64,7 @@ $(document).ready(function(){
             if (operator === "") {
                 a += pressed;
             } else {
-                b = pressed;
+                b += pressed;
             }
             display(pressed);
 //            console.log("went to else");
