@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
-    var a = 0;
-    var b = 0;
+    var a = "";
+    var b = "";
     var result = 0;
     var pressed = "";
     var operator = "";
@@ -50,6 +50,7 @@ $(document).ready(function(){
             b = 0;
             result = 0;
             pressed = "";
+            operator = "";
             display(calc);
             console.log("all was cleared");
         } else if (buttonValue === "="){
